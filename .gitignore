@@ -1,0 +1,6 @@
+data/
+*.db
+*.sqlite
+.env
+.env.*
+!*.example
