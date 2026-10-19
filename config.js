@@ -1,6 +1,6 @@
-// Replace these with the public URL and anon/publishable key from your Supabase project.
-// This key is intended for browser use; database access is limited by the RLS policies in supabase/schema.sql.
+// Public browser configuration for the habit tracker.
+// The publishable key is designed for client use; RLS policies protect all data.
 window.HABIT_SUPABASE = {
-  url: '',
-  anonKey: ''
+  url: 'https://wpavmepirovukswokbqt.supabase.co',
+  anonKey: 'sb_publishable_LA-XpZZpGb4yDkLziZUEpA_Cs7MbzEc'
 };
