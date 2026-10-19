@@ -1,8 +1,6 @@
 name: Publish habit tracker to GitHub Pages
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -23,6 +21,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Require a Supabase project
+        run: |
+          if grep -Fq "url: ''" config.js || grep -Fq "anonKey: ''" config.js; then
+            echo "Configure the Supabase URL and anon key in config.js before publishing." >&2
+            exit 1
+          fi
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site
