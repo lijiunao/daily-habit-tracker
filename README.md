@@ -14,7 +14,7 @@
 
 ## 发布到 GitHub Pages
 
-仓库包含 `.github/workflows/pages.yml`。推送到 `main` 后会自动构建并发布。首次发布如尚未启用 Pages，可在仓库 Settings → Pages 中将 Build and deployment 的 Source 设为 GitHub Actions。
+仓库包含 `.github/workflows/pages.yml`。配置 `config.js` 后，在 GitHub Actions 中手动运行 “Publish habit tracker to GitHub Pages” 工作流。首次发布如尚未启用 Pages，可在仓库 Settings → Pages 中将 Build and deployment 的 Source 设为 GitHub Actions。
 
 网页地址：<https://lijiunao.github.io/daily-habit-tracker/>
 
@@ -24,4 +24,4 @@
 
 ## 隐私
 
-本仓库不包含用户数据。请勿提交本地数据库、密码、Supabase `service_role` key 或任何个人记录。
+本仓库不包含用户数据。网站运行后，注册邮箱、显示名称、每日饮水/抽烟数值、提醒设置和小组成员关系会保存在 Supabase 项目；小组记录只对该组成员开放。请勿提交本地数据库、密码、Supabase `service_role` key 或任何个人记录。Supabase anon/publishable key 会随网页公开，必须通过 RLS 策略保护数据库。
